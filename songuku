@@ -1,0 +1,33 @@
+🛠️ Hướng Dẫn Cài Đặt
+Bước 1: Cài Đặt Các Phụ Thuộc
+Chạy các lệnh dưới đây để cài đặt các phụ thuộc cần thiết:
+
+sudo apt update && sudo apt install -y pkg-config libssl-dev
+Bước 2: Cài Đặt Rust
+Cài đặt Rust bằng các lệnh sau:
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+Kiểm tra version:
+
+rustc --version
+cargo --version
+Bước 3: Cập Nhật Hồ Sơ Bash
+Để đảm bảo Rust được tải mỗi khi bạn bắt đầu phiên làm việc mới, chạy lệnh sau:
+
+echo 'source $HOME/.cargo/env' >> ~/.bashrc
+source ~/.bashrc
+Bước 4: Cài Đặt Soundness
+Cài đặt Soundness bằng cách chạy các lệnh sau:
+
+curl -sSL https://raw.githubusercontent.com/soundnesslabs/soundness-layer/main/soundnessup/install | bash
+source ~/.bashrc
+soundnessup
+Bước 5: Cài Đặt & Cập Nhật Soundness
+Chạy các lệnh dưới đây để cài đặt và cập nhật công cụ Soundness:
+
+soundnessup install
+soundnessup update
+Bước 6: Tạo Phrase & Pubkey
+soundness-cli generate-key --name my-key
+Nếu gặp phải bất kỳ vấn đề nào có thể hỏi thêm tại TopAME | Chat - Supports
